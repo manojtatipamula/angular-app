@@ -8,6 +8,8 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { FormsModule } from '@angular/forms';
 import { UsersService } from './services/users.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSlideToggleModule
   ],
   providers: [
     provideClientHydration(),
     UsersService,
-    HttpClient
+    HttpClient,
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
