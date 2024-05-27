@@ -1,3 +1,3 @@
 export const Environment = {
-    baseUrl: 'http://13.51.56.247:4000'
+    baseUrl: 'http://34.204.42.114:4000'
 };
